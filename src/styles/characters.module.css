@@ -1,0 +1,19 @@
+.container {
+  padding: 3rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, 188px);
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(auto-fill, 172.5px);
+    @media screen and (max-width: 470px) {
+      padding: 1rem;
+    }
+  }
+}
+
+.favTitle {
+  text-transform: uppercase;
+  margin-left: 3rem;
+  margin-top: 3rem;
+}

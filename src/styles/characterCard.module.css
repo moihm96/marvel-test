@@ -1,0 +1,38 @@
+.container {
+  background-color: black;
+  max-width: fit-content;
+  max-height: fit-content;
+  text-decoration: none;
+}
+
+.imageContainer {
+  background-color: red;
+  height: 195px;
+  width: 188px;
+  @media screen and (max-width: 900px) {
+    width: 172.5px;
+  }
+}
+.responsiveImage {
+  width: 100%;
+  height: 100%;
+}
+.cardFooter {
+  background-color: black;
+  color: white;
+  display: flex;
+  max-width: 156px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  @media screen and (max-width: 900px) {
+    max-width: 140.5px;
+  }
+}
+
+.favButton {
+  background-color: transparent;
+  border: none;
+}

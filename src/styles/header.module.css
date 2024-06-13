@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.favoriteWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2.5rem;
+  text-decoration: none;
+}
+
+.logo {
+  margin-left: 3rem;
+}
+
+.numberOfFavorites {
+  color: white;
+  margin-left: 0.5rem;
+}
