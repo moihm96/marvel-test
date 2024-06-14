@@ -2,10 +2,10 @@
   padding: 3rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fill, 188px);
+  grid-template-columns: repeat(auto-fill, var(--size-lg));
 
   @media screen and (max-width: 900px) {
-    grid-template-columns: repeat(auto-fill, 172.5px);
+    grid-template-columns: repeat(auto-fill, var(--size-md));
     @media screen and (max-width: 470px) {
       padding: 1rem;
     }

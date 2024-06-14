@@ -6,17 +6,15 @@
 }
 
 .imageContainer {
-  background-color: red;
+  background-color: var(--Marvel-red);
   height: 195px;
-  width: 188px;
+  width: var(--size-lg);
   @media screen and (max-width: 900px) {
-    width: 172.5px;
+    width: var(--size-md);
   }
+  padding-bottom: 5px;
 }
-.responsiveImage {
-  width: 100%;
-  height: 100%;
-}
+
 .cardFooter {
   background-color: black;
   color: white;
@@ -24,9 +22,7 @@
   max-width: 156px;
   justify-content: space-between;
   align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 8px;
+  padding: 0px 16px 8px;
   @media screen and (max-width: 900px) {
     max-width: 140.5px;
   }

@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 "use-client";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../styles/characterCard.module.css";
 
 import { useState, useEffect } from "react";
 import { useFavoriteContext } from "@/context/FavoriteContext";
-import { FavIConOff } from "./FavIconOff";
-import { FavIconOn } from "./FavIconOn";
+import { FavIConOff } from "./Icons/FavIconOff";
+import { FavIconOn } from "./Icons/FavIconOn";
 import { Character } from "@/types";
 
 export const CharacterCard = ({ character }: { character: Character }) => {
@@ -31,12 +30,12 @@ export const CharacterCard = ({ character }: { character: Character }) => {
     <div key={character.id} className={styles.container}>
       <div className={styles.imageContainer}>
         <Link href={`/character/${character.id}`}>
-          <Image
+          <img
             src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
             alt={character.name}
             width="188"
             height="190"
-            className={styles.responsiveImage}
+            className="responsiveImage"
           />
         </Link>
       </div>

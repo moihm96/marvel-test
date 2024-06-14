@@ -47,7 +47,7 @@ export const fetchCharacter = async (id: string) => {
   const comics = await responseComics.json();
 
   return {
-    character: character.data.results[0] as Character[],
+    character: character.data.results[0] as Character,
     comics: comics.data.results as Comic[],
   };
 };

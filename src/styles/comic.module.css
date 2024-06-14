@@ -1,0 +1,21 @@
+.imageContainer {
+  background-color: black;
+  width: 179px;
+  height: 278px;
+  @media screen and (max-width: 900px) {
+    width: 168px;
+    height: 252px;
+    @media screen and (max-width: 400px) {
+      width: 164px;
+      height: 246px;
+    }
+  }
+}
+
+.title {
+  text-decoration: solid;
+}
+
+.comicContainer {
+  width: 100%;
+}

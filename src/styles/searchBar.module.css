@@ -1,0 +1,15 @@
+.container {
+  border-bottom: 1px solid black;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+.input {
+  margin-left: 12px;
+}
+
+.results {
+  margin-left: 3rem;
+}

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Character } from "@/types";
 import { useCountContext } from "@/context/CountContext";
 import { CharacterCard } from "./CharacterCard";
+import { SearchBar } from "./SearchBar";
 const favoriteUrl = "/favorites";
 type CharacterPropTypes = {
   characters: Character[];
@@ -24,6 +25,7 @@ const Characters = ({ characters, count, pathName }: CharacterPropTypes) => {
   return (
     <div>
       {isFavoritePage && <p className={styles.favTitle}>FAVORITES</p>}
+      <SearchBar />
       <div className={styles.container}>
         {characters.map((character) => {
           return <CharacterCard key={character.id} character={character} />;

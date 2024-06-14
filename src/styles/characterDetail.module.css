@@ -1,0 +1,60 @@
+.characterContainer {
+  padding: 0rem 3rem 0rem 3rem;
+  background-color: black;
+  border-top: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 680px) {
+    display: block;
+    min-height: 600px;
+    padding: 0rem;
+  }
+}
+.imageContainer {
+  background-color: black;
+  height: 320px;
+  width: 320px;
+  @media screen and (max-width: 900px) {
+    width: 278px;
+    height: 278px;
+    @media screen and (max-width: 680px) {
+      width: 100%;
+      height: 400px;
+    }
+  }
+}
+
+.characterInfo {
+  color: white;
+  max-width: 640px;
+  margin: 6rem 0rem 6rem 3rem;
+  @media screen and (max-width: 470px) {
+    margin: 1.5rem 1rem 2rem 1rem;
+  }
+}
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name {
+  text-transform: uppercase;
+}
+
+.favButton {
+  background-color: transparent;
+  border: none;
+}
+
+.comicsContainer {
+  padding: 3rem;
+  gap: 1rem;
+  overflow: scroll;
+  overflow-x: auto;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(179px, 1fr);
+  scrollbar-width: thin;
+  scrollbar-color: red;
+}
