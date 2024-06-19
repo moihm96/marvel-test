@@ -8,7 +8,7 @@ export default async function SearchesPage({
   params: { name: string };
 }) {
   const { name } = params;
-  const { characters, count } = await searchCharacters(name);
+  const { characters } = await searchCharacters(name);
 
-  return <Characters characters={characters} count={count} />;
+  return <Characters characters={characters} />;
 }

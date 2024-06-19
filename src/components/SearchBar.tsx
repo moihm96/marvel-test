@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
 import styles from '../styles/searchBar.module.css';
-import { useCountContext } from '@/context/CountContext';
+import { useFavoriteContext } from '@/context/FavoriteContext';
 import { useRouter, usePathname } from 'next/navigation';
 import { Search } from './Icons/Search';
 import { getSearchQuery } from '../../utils/help';
@@ -20,7 +20,7 @@ export const SearchBar = () => {
     }
   }, 500);
 
-  const { count } = useCountContext();
+  const { count } = useFavoriteContext();
 
   return (
     <div>

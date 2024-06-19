@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../styles/globals.css';
 import { Header } from '@/components/Header';
-import { CountWrapper } from '@/context/CountContext';
 import { FavoriteWrapper } from '@/context/FavoriteContext';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -22,10 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <FavoriteWrapper>
-          <CountWrapper>
-            <Header />
-            {children}
-          </CountWrapper>
+          <Header />
+          {children}
         </FavoriteWrapper>
       </body>
     </html>

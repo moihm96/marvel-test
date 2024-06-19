@@ -1,26 +1,25 @@
 'use client';
 import styles from '../styles/characters.module.css';
 
-import { useEffect } from 'react';
 import { Character } from '@/types';
-import { useCountContext } from '@/context/CountContext';
 import { CharacterCard } from './CharacterCard';
 import { SearchBar } from './SearchBar';
+import { useFavoriteContext } from '@/context/FavoriteContext';
+import { useEffect } from 'react';
 const favoriteUrl = '/favorites';
 type CharacterPropTypes = {
   characters: Character[];
-  count: number;
   pathName?: string;
 };
 
-const Characters = ({ characters, count, pathName }: CharacterPropTypes) => {
-  const { setCount } = useCountContext();
-
+const Characters = ({ characters, pathName }: CharacterPropTypes) => {
   const isFavoritePage = pathName == favoriteUrl;
 
+  const { setCount } = useFavoriteContext();
+
   useEffect(() => {
-    setCount(count);
-  }, [setCount, count]);
+    setCount(characters.length);
+  }, [characters.length, setCount]);
 
   return (
     <div>
