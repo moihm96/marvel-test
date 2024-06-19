@@ -5,7 +5,6 @@ import styles from '../../../styles/error.module.css';
 
 export default function Error({
   error,
-  reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
