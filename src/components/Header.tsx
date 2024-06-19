@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import styles from "../styles/header.module.css";
-import { useEffect, useState } from "react";
-import { useFavoriteContext } from "@/context/FavoriteContext";
+import styles from '../styles/header.module.css';
+import { useEffect, useState } from 'react';
+import { useFavoriteContext } from '@/context/FavoriteContext';
 
 export const Header = () => {
   const { favorites } = useFavoriteContext();

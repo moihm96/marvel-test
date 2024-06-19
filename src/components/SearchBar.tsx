@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import styles from "../styles/searchBar.module.css";
-import { useCountContext } from "@/context/CountContext";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { Search } from "./Icons/Search";
+import styles from '../styles/searchBar.module.css';
+import { useCountContext } from '@/context/CountContext';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { Search } from './Icons/Search';
 
 export const SearchBar = () => {
-  const [querySearch, setQuerySearch] = useState("");
+  const [querySearch, setQuerySearch] = useState('');
   const router = useRouter();
 
   const handleSearch = (event: { key: string }) => {
-    if (event.key == "Enter" && querySearch.trim() != "") {
+    if (event.key == 'Enter' && querySearch.trim() != '') {
       router.push(`/searches/${querySearch}`);
     }
   };

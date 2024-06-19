@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import {
   createContext,
   useState,
@@ -6,7 +6,7 @@ import {
   ReactNode,
   Dispatch,
   SetStateAction,
-} from "react";
+} from 'react';
 
 type CountContextType = {
   count: number;
@@ -27,7 +27,7 @@ export function CountWrapper({ children }: { children: ReactNode }) {
 export function useCountContext() {
   const countContext = useContext(CountContext);
   if (countContext === undefined) {
-    throw new Error("useCountContext must be inside a CountWrapper");
+    throw new Error('useCountContext must be inside a CountWrapper');
   }
   return countContext;
 }

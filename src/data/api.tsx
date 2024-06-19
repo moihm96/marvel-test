@@ -1,21 +1,21 @@
-import { Character, Comic } from "@/types";
-import { MD5 } from "crypto-js";
+import { Character, Comic } from '@/types';
+import { MD5 } from 'crypto-js';
 
 const API_URL = process.env.MARVEL_APP_BASE_URL;
 
 const ts = new Date().getTime();
-const apiKey = process.env.MARVEL_APP_API_KEY ?? "";
-const privateKey = process.env.MARVEL_APP_PRIVATE_KEY ?? "";
+const apiKey = process.env.MARVEL_APP_API_KEY ?? '';
+const privateKey = process.env.MARVEL_APP_PRIVATE_KEY ?? '';
 const stringToHash = ts + privateKey + apiKey;
 const hash = MD5(stringToHash);
 const limit = 50;
 
 const query = `ts=${ts}&apikey=${apiKey}&hash=${hash}`;
 
-export const fetchCharacters = async () => {
-  const url = `${API_URL}/characters?limit=${limit}&${query}`;
+export const urlCharacters = `${API_URL}/characters?limit=${limit}&${query}`;
 
-  const response = await fetch(url);
+export const fetchCharacters = async () => {
+  const response = await fetch(urlCharacters);
   const data = await response.json();
 
   return {

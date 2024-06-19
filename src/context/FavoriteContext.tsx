@@ -1,6 +1,7 @@
-"use client";
-import { Character } from "@/types";
-import { createContext, useState, useContext, ReactNode } from "react";
+/* eslint-disable no-unused-vars */
+'use client';
+import { Character } from '@/types';
+import { createContext, useState, useContext, ReactNode } from 'react';
 
 type FavoriteContextType = {
   favorites: Character[];
@@ -9,7 +10,7 @@ type FavoriteContextType = {
 };
 
 const FavoriteContext = createContext<FavoriteContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export function FavoriteWrapper({ children }: { children: ReactNode }) {
@@ -37,7 +38,7 @@ export function FavoriteWrapper({ children }: { children: ReactNode }) {
 export function useFavoriteContext() {
   const favoriteContext = useContext(FavoriteContext);
   if (favoriteContext === undefined) {
-    throw new Error("usefavoriteContext must be inside a FavoriteWrapper");
+    throw new Error('usefavoriteContext must be inside a FavoriteWrapper');
   }
   return favoriteContext;
 }

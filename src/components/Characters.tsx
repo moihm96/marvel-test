@@ -1,12 +1,12 @@
-"use client";
-import styles from "../styles/characters.module.css";
+'use client';
+import styles from '../styles/characters.module.css';
 
-import { useEffect } from "react";
-import { Character } from "@/types";
-import { useCountContext } from "@/context/CountContext";
-import { CharacterCard } from "./CharacterCard";
-import { SearchBar } from "./SearchBar";
-const favoriteUrl = "/favorites";
+import { useEffect } from 'react';
+import { Character } from '@/types';
+import { useCountContext } from '@/context/CountContext';
+import { CharacterCard } from './CharacterCard';
+import { SearchBar } from './SearchBar';
+const favoriteUrl = '/favorites';
 type CharacterPropTypes = {
   characters: Character[];
   count: number;

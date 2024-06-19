@@ -1,21 +1,23 @@
-"use-client";
-import Link from "next/link";
-import styles from "../styles/characterCard.module.css";
+'use-client';
+import Link from 'next/link';
+import styles from '../styles/characterCard.module.css';
 
-import { useState, useEffect } from "react";
-import { useFavoriteContext } from "@/context/FavoriteContext";
-import { FavIConOff } from "./Icons/FavIconOff";
-import { FavIconOn } from "./Icons/FavIconOn";
-import { Character } from "@/types";
+import { useState, useEffect } from 'react';
+import { useFavoriteContext } from '@/context/FavoriteContext';
+import { FavIConOff } from './Icons/FavIconOff';
+import { FavIconOn } from './Icons/FavIconOn';
+import { Character } from '@/types';
 
 export const CharacterCard = ({ character }: { character: Character }) => {
   const { favorites, addFavorite, removeFavorite } = useFavoriteContext();
 
-  const [isFavorite, setIsFavorite] = useState(false);
+  const favoriteFind =
+    favorites.find((favorite) => favorite.id === character.id) !== undefined;
+  const [isFavorite, setIsFavorite] = useState(favoriteFind);
 
   useEffect(() => {
-    setIsFavorite(favorites.includes(character));
-  }, [favorites, character]);
+    setIsFavorite(favoriteFind);
+  }, [favorites, character, favoriteFind]);
 
   const handleFavorites = () => {
     if (isFavorite) {

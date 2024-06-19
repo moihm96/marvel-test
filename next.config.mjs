@@ -3,10 +3,10 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "i.annihil.us",
-        port: "",
-        pathname: "/u/prod/marvel/i/mg/**",
+        protocol: 'http',
+        hostname: 'i.annihil.us',
+        port: '',
+        pathname: '/u/prod/marvel/i/mg/**',
       },
     ],
   },

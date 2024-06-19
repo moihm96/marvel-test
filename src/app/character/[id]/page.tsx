@@ -1,5 +1,5 @@
-import CharacterDetail from "@/components/CharacterDetail";
-import { fetchCharacter } from "@/data/api";
+import CharacterDetail from '@/components/CharacterDetail';
+import { fetchCharacter } from '@/data/api';
 
 export default async function CharacterPage({
   params,

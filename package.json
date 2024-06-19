@@ -26,6 +26,7 @@
     "@testing-library/react": "^16.0.0",
     "@types/crypto-js": "^4.2.2",
     "@types/jest": "^29.5.12",
+    "@types/next": "^9.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -37,7 +38,6 @@
     "eslint-plugin-react": "^7.34.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "msw": "^2.2.3",
     "typescript": "^5"
   }
 }

@@ -1,7 +1,7 @@
-import type { Comic } from "@/types";
-import styles from "../styles/comic.module.css";
+import type { Comic as ComicType } from '@/types';
+import styles from '../styles/comic.module.css';
 
-const Comic = ({ comic }: { comic: Comic }) => {
+const Comic = ({ comic }: { comic: ComicType }) => {
   return (
     <div key={comic.id} className={styles.comicContainer}>
       <div className={styles.imageContainer}>

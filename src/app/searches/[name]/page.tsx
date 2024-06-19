@@ -1,6 +1,6 @@
-import Characters from "@/components/Characters";
+import Characters from '@/components/Characters';
 
-import { searchCharacters } from "@/data/api";
+import { searchCharacters } from '@/data/api';
 
 export default async function SearchesPage({
   params,
