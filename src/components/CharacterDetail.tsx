@@ -1,13 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-
 import Comic from './Comic';
 import styles from '../styles/characterDetail.module.css';
 import { FavIConOff } from './Icons/FavIconOff';
 import { FavIconOn } from './Icons/FavIconOn';
-import { useFavoriteContext } from '@/context/FavoriteContext';
 import type { Character, Comic as ComicType } from '@/types';
+import { useFavorite } from '@/hooks/useFavorite';
 
 const CharacterDetail = ({
   character,
@@ -16,25 +14,7 @@ const CharacterDetail = ({
   character: Character;
   comics: ComicType[];
 }) => {
-  const { favorites, addFavorite, removeFavorite } = useFavoriteContext();
-
-  const [isFavorite, setIsFavorite] = useState(
-    favorites.find((favorite) => favorite.id == character.id) != undefined,
-  );
-
-  useEffect(() => {
-    setIsFavorite(
-      favorites.find((favorite) => favorite.id == character.id) != undefined,
-    );
-  }, [favorites, character]);
-
-  const handleFavorites = () => {
-    if (isFavorite) {
-      removeFavorite(character.id);
-    } else {
-      addFavorite(character);
-    }
-  };
+  const { isFavorite, handleFavorites } = useFavorite(character);
 
   return (
     <div>

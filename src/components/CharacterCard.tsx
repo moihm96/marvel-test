@@ -2,30 +2,13 @@
 import Link from 'next/link';
 import styles from '../styles/characterCard.module.css';
 
-import { useState, useEffect } from 'react';
-import { useFavoriteContext } from '@/context/FavoriteContext';
 import { FavIConOff } from './Icons/FavIconOff';
 import { FavIconOn } from './Icons/FavIconOn';
 import { Character } from '@/types';
+import { useFavorite } from '@/hooks/useFavorite';
 
 export const CharacterCard = ({ character }: { character: Character }) => {
-  const { favorites, addFavorite, removeFavorite } = useFavoriteContext();
-
-  const favoriteFind =
-    favorites.find((favorite) => favorite.id === character.id) !== undefined;
-  const [isFavorite, setIsFavorite] = useState(favoriteFind);
-
-  useEffect(() => {
-    setIsFavorite(favoriteFind);
-  }, [favorites, character, favoriteFind]);
-
-  const handleFavorites = () => {
-    if (isFavorite) {
-      removeFavorite(character.id);
-    } else {
-      addFavorite(character);
-    }
-  };
+  const { isFavorite, handleFavorites } = useFavorite(character);
 
   return (
     <div key={character.id} className={styles.container}>
